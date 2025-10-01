@@ -21,7 +21,10 @@ public class StreamsDemo {
 
 
         // Filter even numbers, square them, and collect
-        numbers.stream().filter(n -> n % 2 == 0).map(n -> n * n).forEach(System.out::println);
+        numbers.stream()
+                .filter(n -> n % 2 == 0)
+                .map(n -> n * n)
+                .forEach(System.out::println);
 
         List res = numbers.stream().filter(n -> n % 2 == 0).map(n -> n * n).collect(Collectors.toList());
         numbers.stream().filter(n -> n % 2 == 0).count();
