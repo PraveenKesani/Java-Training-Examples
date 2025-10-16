@@ -21,12 +21,19 @@ class ThreadExample1 {
         MyThread1 t1 = new MyThread1();
         MyThread2 t2 = new MyThread2();
 
+        t2.setPriority(Thread.MIN_PRIORITY);
 
 
-        t1.run(); //not started thread, just method execution
+        t1.start(); //not started thread, just method execution
         t2.start(); // starts a new thread (calls run internally)
         for (int i = 1; i <= 10; i++) {
             System.out.println(Thread.currentThread().getName() + " - " + i);
         }
+
+        System.out.println(t1.getPriority() +"--"+t2.getPriority()+"--");
+
+
+
+
     }
 }

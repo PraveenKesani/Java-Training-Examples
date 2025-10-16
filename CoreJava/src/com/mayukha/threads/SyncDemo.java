@@ -3,7 +3,7 @@ package com.mayukha.threads;
 class Counter {
     private int count = 0;
 
-    synchronized void increment() {
+    void increment() {
         count++;
     }
 
